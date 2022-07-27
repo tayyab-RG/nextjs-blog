@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedPostsData } from '../lib/blogs';
 import utilStyles from '../styles/utils.module.css';
@@ -21,7 +22,9 @@ export default function Home({ allBlogsData }) {
         <ul className={utilStyles.list}>
           {allBlogsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              {title}
+              <Link href={`/blogs/${id}`}>
+                {title}
+              </Link>
               <br />
               {id}
               <br />

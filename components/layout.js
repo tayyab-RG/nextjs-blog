@@ -36,9 +36,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt={name}
             />
-            <Link href="/newpage">
-              <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            </Link>
+            <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
           <>
